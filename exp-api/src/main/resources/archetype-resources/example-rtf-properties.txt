@@ -5,7 +5,7 @@ mule_cps_key_password=changeit
 mule.env=DEV
 http.port=8081
 https.port=8081
-cps.configServerBaseUrl=https://levi-cps-dev.us-e2.cloudhub.io/configuration-property-service/v1/config
+cps.configServerBaseUrl=https://cps-dev.us-e2.cloudhub.io/configuration-property-service/v1/config
 cps.insecure=false
 cps.projectName=${artifactId}
 cps.branchName=base
@@ -17,4 +17,4 @@ cps.clientSecret=x
 Note:
 The curl command to test the rtf is:
 
-curl -Lvk https://172.26.251.177/${artifactId}/v1/ping -H "Host: ${artifactId}-dev.levi.com" -H "client_id: xx" -H "client_secret: xx" -H "x-dependent-ping: false"
+curl -Lvk https://host.domain/${artifactId}/v1/ping -H "Host: ${artifactId}-dev.levi.com" -H "client_id: xx" -H "client_secret: xx" -H "x-dependent-ping: false"

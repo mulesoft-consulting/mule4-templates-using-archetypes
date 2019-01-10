@@ -1,0 +1,14 @@
+{
+  "projectName": "${artifactId}",
+  "branchName": "base",
+  "instanceId": "base",
+  "keyId": "base",
+  "envName": "DEV",
+  "imports": [
+    
+  ],
+  "properties": {
+    "request.api.host": "skeleton-ms.domain",
+    "request.api.port": "443"
+  }
+}

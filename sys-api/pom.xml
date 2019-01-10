@@ -1,0 +1,36 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.mule.templates</groupId>
+  <artifactId>sys-api</artifactId>
+  <version>1.0.0</version>
+  <name>Archetype - Mule System API Project</name>
+  <url>http://maven.apache.org</url>
+
+  <profiles>
+		<profile>
+			<id>artifact-repo</id>
+			<distributionManagement>
+				<repository>
+					<id>corporate-artifact-repository</id>
+					<name>Corporate Artifact Repository</name>
+					<url>https://repo-001.corporate.com:8443/repository</url>
+					<layout>default</layout>
+				</repository>
+			</distributionManagement>
+		</profile>
+		<profile>
+			<id>exchange</id>
+			<distributionManagement>
+				<repository>
+					<id>my-organization-exchange-repository</id>
+					<name>My Organization Exchange</name>
+					<url>https://maven.anypoint.mulesoft.com/api/v2/organizations/${my-organization-anypoint-orgid}/maven</url>
+					<layout>default</layout>
+				</repository>
+			</distributionManagement>
+		</profile>
+  </profiles>
+</project>

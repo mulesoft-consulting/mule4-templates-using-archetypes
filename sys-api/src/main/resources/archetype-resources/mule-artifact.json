@@ -1,0 +1,27 @@
+{
+  "secureProperties": ["cps.keyId,cps.clientId","cps.clientSecret",
+                       "anypoint.platform.client_secret","mule_cps_keystore_password",
+  					   "mule_cps_key_password","mule_cps_keystore_filename"],
+  "redeploymentEnabled": true,
+  "name": "${artifactId}",
+  "minMuleVersion": "4.1.1",
+  "requiredProduct": "MULE_EE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedResources": [
+        "httplistener.jks",
+        "common.properties",
+        "cps-boot.properties",
+        "DEV-config.properties",
+        "TEST-config.properties",
+        "QA-config.properties",
+        "PRD-config.properties"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}

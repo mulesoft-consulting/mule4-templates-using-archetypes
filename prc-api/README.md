@@ -1,4 +1,4 @@
-# archetype-process-api
+# Archetype for Template: prc-api
 
 Used to generate the archetype for generating a skeleton Process API.
 

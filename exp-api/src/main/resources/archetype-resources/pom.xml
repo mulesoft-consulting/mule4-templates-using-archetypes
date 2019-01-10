@@ -2,6 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
+<!-- Experience API from exp-api -->
+
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>${groupId}</groupId>
@@ -15,13 +17,13 @@
 		<muleHttpConnector>1.2.0</muleHttpConnector>
 		
 		<api.version>1.0.0</api.version>
-		<api.http.port>8081</api.http.port>
-		<api.https.port>8082</api.https.port>
+		<exp.api.http.port>8081</exp.api.http.port>
+		<exp.api.https.port>8082</exp.api.https.port>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 
-		<app.runtime>4.1.4</app.runtime>
+		<app.runtime>4.1.5</app.runtime>
 		<anypoint.monitoring.suffix></anypoint.monitoring.suffix>
 		<maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
 		<mule.maven.plugin.version>3.2.3</mule.maven.plugin.version>
@@ -204,7 +206,7 @@
 		<profile>
 			<id>use-dlb</id>
 			<properties>
-				<api.https.port>8092</api.https.port>
+				<exp.api.https.port>8092</exp.api.https.port>
 				<api.base>/</api.base>
 				<dlb.routing.prefix>-ma</dlb.routing.prefix>
 			</properties>
@@ -266,8 +268,8 @@
 									<mule_cps_keystore_password>${mule_cps_keystore_password}</mule_cps_keystore_password>
 									<mule_cps_key_password>${mule_cps_key_password}</mule_cps_key_password>
 									<mule.cps.retry.count>${mule.cps.retry.count}</mule.cps.retry.count>
-									<api.http.port>${api.http.port}</api.http.port>
-									<api.https.port>${api.https.port}</api.https.port>
+									<exp.api.http.port>${exp.api.http.port}</exp.api.http.port>
+									<exp.api.https.port>${exp.api.https.port}</exp.api.https.port>
 									<api.base>${api.base}</api.base>
 									<sun.net.http.allowRestrictedHeaders>false</sun.net.http.allowRestrictedHeaders>
 								</properties>
@@ -325,8 +327,8 @@
 									<mule_cps_key_password>${mule_cps_key_password}</mule_cps_key_password>
 									<mule.cps.retry.count>${mule.cps.retry.count}</mule.cps.retry.count>
 									<anypoint.platform.visualizer.layer>Experience</anypoint.platform.visualizer.layer>
-									<api.http.port>8081</api.http.port>
-									<api.https.port>8081</api.https.port>
+									<exp.api.http.port>8081</exp.api.http.port>
+									<exp.api.https.port>8081</exp.api.https.port>
 									<sun.net.http.allowRestrictedHeaders>false</sun.net.http.allowRestrictedHeaders>
 								</properties>
 							</runtimeFabricDeployment>

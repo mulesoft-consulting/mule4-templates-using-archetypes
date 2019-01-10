@@ -39,10 +39,11 @@ An example of the runtime properties needed for Studio are in the file "example-
 
 The pom.xml file contains the Runtime properties for CloudHub deployment.
 
-
 ## Maven Settings
 
-The Mule deployment assumes that certain deployment properties will come from profiles specified when the mvn command is executed. An example-settings.xml is provided as a reference for creating your own settings.xml file. The settings.xml file is a standard part of Maven and is described in its online documentation. Once the settings.xml file has been created, export a u and a p shell environment variables containing your Anypoint user name and password. 
+The Mule deployment assumes that certain deployment properties will come from profiles specified when the mvn command is executed. An example-settings.xml is provided as a reference for creating your own settings.xml file. The settings.xml file is a standard part of Maven and is described in its online documentation. 
+
+Once the settings.xml file has been created, export a u and a p shell environment variables containing your Anypoint user name and password. 
 
 Then use these maven command to deploy the API project:
 
@@ -58,21 +59,28 @@ mvn clean deploy -Partifact-repo
 
 ### Build and publish to Exchange
 ```
-mvn clean deploy -Pexchange
+mvn clean deploy -Pexchange -Du=${u} -Dp=${p}
 ```
 
 ### Deploy to CloudHub
 ```
-mvn mule:deploy -Dmule.artifact=xx.jar -Pcloudhub -Denv=xxx
+mvn mule:deploy -Du=${u} -Dp=${p} -Dmule.artifact=xx.jar -Pcloudhub -Denv=xxx 
+```
+
+### Deploy to CloudHub DLB
+```
+mvn mule:deploy -Du=${u} -Dp=${p} -Dmule.artifact=xx.jar -Pcloudhub -Denv=xxx -Puse-dlb
 ```
 
 ### Deploy to RTF
 ```
-mvn deploy -DmuleDeploy -Prtf -Denv=xxx
+mvn deploy -Du=${u} -Dp=${p} -DmuleDeploy -Prtf -Denv=xxx
 ```
 
 ### Deploy to Hybrid Runtime
-```mvn deploy -DmuleDeploy -Phybrid -Denv=xxx```
+```
+mvn deploy -Du=${u} -Dp=${p} -DmuleDeploy -Phybrid -Denv=xxx
+```
 
 Replacing the xxx's with the appropriate environment name.
 
@@ -82,6 +90,6 @@ This template also provides a command for automatically configuring the API Mana
 To configure the api in API Manager, use the following Maven command:
 
 ```
-mvn clean install -Pconfig-api
+mvn clean install -Du=${u} -Dp=${p} -Pconfig-api -Denv=xxx
 ```
 

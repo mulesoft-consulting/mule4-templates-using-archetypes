@@ -16,7 +16,7 @@ http://www.mulesoft.org/schema/mule/tls http://www.mulesoft.org/schema/mule/tls/
 
 	<http:listener-config name="api-httpListenerConfig">
 		<http:listener-connection host="0.0.0.0"
-			port="${exp.api.https.port}" protocol="HTTPS">
+			port="${sys.api.https.port}" protocol="HTTPS">
 			<tls:context >
 				<tls:key-store type="jks" path="httplistener.jks" alias="mule" keyPassword="changeit" password="changeit" />
 			</tls:context>
@@ -30,9 +30,9 @@ http://www.mulesoft.org/schema/mule/tls http://www.mulesoft.org/schema/mule/tls/
 		outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
 
 	<flow name="api-main">
-		<http:listener path="${api.base}${api.semantic.version}/*" doc:name="Listener" config-ref="api-httpListenerConfig">
+		<http:listener path="/${api.base}/${api.semantic.version}/*" doc:name="Listener" config-ref="api-httpListenerConfig">
 			<http:response statusCode="#[vars.httpStatus default 200]"
-				reasonPhrase="#[vars.reasonPhrase]" >
+				reasonPhrase="#[vars.httpReason]" >
 				<http:headers><![CDATA[#[output application/java
 ---
 {

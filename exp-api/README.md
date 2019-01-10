@@ -1,4 +1,4 @@
-# archetype-exp-api
+# Archetype for Template: exp-api
 
 Used to generate the archetype for generating a skeleton Experience API.
 

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:scripting="http://www.mulesoft.org/schema/mule/scripting"
+	xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:min-log="http://www.mulesoft.org/schema/mule/min-log"
+	xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+	http://www.mulesoft.org/schema/mule/min-log http://www.mulesoft.org/schema/mule/min-log/current/mule-min-log.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+http://www.mulesoft.org/schema/mule/scripting http://www.mulesoft.org/schema/mule/scripting/current/mule-scripting.xsd">
+
+	<flow name="put:\ping:api-config">
+		<min-log:timed transactionProperties="#[vars.transactionProperties]"
+			doc:name="Timed">
+
+			<set-variable value="${api.base}" doc:name="moduleName" variableName="moduleName"/>
+			<ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+				xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd" doc:id="741d2bee-4242-4b61-8083-a76795db07e0">
+				<ee:message>
+					<ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{
+  module: vars.moduleName,
+  status: "200",
+  message: "Alive"
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+		</min-log:timed>
+	</flow>
+
+	<flow name="get:\ping:api-config">
+		<min-log:timed transactionProperties="#[vars.transactionProperties]"
+			doc:name="Timed">
+			<set-variable value="${api.base}" doc:name="moduleName" variableName="moduleName"/>
+
+			<ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+				xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd" doc:id="eabec06a-cb68-4a89-b6dc-3bdb41c05212">
+				<ee:message>
+					<ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{
+  module: vars.moduleName,
+  status: "200",
+  message: "Alive"
+}]]></ee:set-payload>
+				</ee:message>
+			</ee:transform>
+		</min-log:timed>
+	</flow>
+
+</mule>

@@ -16,7 +16,7 @@ http://www.mulesoft.org/schema/mule/tls http://www.mulesoft.org/schema/mule/tls/
 
 	<http:listener-config name="api-httpListenerConfig">
 		<http:listener-connection host="0.0.0.0"
-			port="${https.private.port}" protocol="HTTPS">
+			port="${prc.api.https.port}" protocol="HTTPS">
 			<tls:context >
 				<tls:key-store type="jks" path="httplistener.jks" alias="mule" keyPassword="changeit" password="changeit" />
 			</tls:context>

@@ -4,8 +4,8 @@
 -Dmule_cps_keystore_password=changeit
 -Dmule_cps_key_password=changeit
 -Dmule.env=DEV
--Dprc.api.http.port=8081
--Dprc.api.https.port=8082
+-Dsys.api.http.port=8081
+-Dsys.api.https.port=8082
 -Dcps.configServerBaseUrl=https://cps-dev.us-e2.cloudhub.io/configuration-property-service/v1/config
 -Dcps.insecure=false
 -Dcps.projectName=${artifactId}

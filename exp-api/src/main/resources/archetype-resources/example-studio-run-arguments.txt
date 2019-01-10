@@ -4,9 +4,9 @@
 -Dmule_cps_keystore_password=changeit
 -Dmule_cps_key_password=changeit
 -Dmule.env=DEV
--Dapi.http.port=8081
--Dapi.https.port=8082
--Dcps.configServerBaseUrl=https://levi-cps-dev.us-e2.cloudhub.io/configuration-property-service/v1/config
+-Dexp.api.http.port=8081
+-Dexp.api.https.port=8082
+-Dcps.configServerBaseUrl=https://cps-dev.us-e2.cloudhub.io/configuration-property-service/v1/config
 -Dcps.insecure=false
 -Dcps.projectName=${artifactId}
 -Dcps.branchName=base

@@ -1,5 +1,5 @@
 # ${artifactId}
-This is a Mule 4.1.x Experience API using API Management. 
+This is a Mule 4.1 a System API using API Management. 
 
 Note, the scope features of minimal-logging are only displayed correctly by the latest Studio versions. 
 
@@ -92,4 +92,5 @@ To configure the api in API Manager, use the following Maven command:
 ```
 mvn clean install -Du=${u} -Dp=${p} -Pconfig-api -Denv=xxx
 ```
+
 

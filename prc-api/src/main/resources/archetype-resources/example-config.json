@@ -1,0 +1,19 @@
+{
+  "projectName": "${artifactId}",
+  "branchName": "base",
+  "instanceId": "base",
+  "keyId": "base",
+  "envName": "DEV",
+  "imports": [
+    
+  ],
+  "properties": {
+  	"secure.properties": "my.client_secret",
+    "my.client_id": "x",
+    "my.client_secret": "x",
+    "request.api.host": "mule-worker-internal-levi-skeleton-sys-api-dev.us-e2.cloudhub.io",
+    "request.api.port": "8092",
+    "request.api.path": "/skeleton-sys-api/v1",
+    "request.host.header": "skeleton-sys-api-dev.levi.com"
+  }
+}

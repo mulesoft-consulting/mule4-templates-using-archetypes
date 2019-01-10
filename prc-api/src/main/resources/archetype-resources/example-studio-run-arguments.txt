@@ -1,0 +1,16 @@
+-M-XX:-UseBiasedLocking
+-Danypoint.platform.gatekeeper=disabled 
+-Dmule_cps_keystore_filename=cps-keystore.jks
+-Dmule_cps_keystore_password=changeit
+-Dmule_cps_key_password=changeit
+-Dmule.env=DEV
+-Dhttp.private.port=8091
+-Dhttps.private.port=8092
+-Dcps.configServerBaseUrl=https://levi-cps-dev.us-e2.cloudhub.io/configuration-property-service/v1/config
+-Dcps.insecure=false
+-Dcps.projectName=${artifactId}
+-Dcps.branchName=base
+-Dcps.instanceId=base
+-Dcps.keyId=base
+-Dcps.clientId=x
+-Dcps.clientSecret=x

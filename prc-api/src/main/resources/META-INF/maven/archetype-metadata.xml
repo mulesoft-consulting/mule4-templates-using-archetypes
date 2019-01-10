@@ -1,0 +1,113 @@
+<archetype-descriptor 
+    xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0 http://maven.apache.org/xsd/archetype-descriptor-1.0.0.xsd" 
+    xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    name="my-archetype">
+
+    <fileSets>
+        <fileSet filtered="true" package="false" encoding="UTF-8">
+            <directory>src/main/java</directory>
+            <includes>
+                <include>**/*.java</include>
+            </includes>
+        </fileSet>
+
+        <fileSet filtered="true" package="false" encoding="UTF-8">
+            <directory>src/main/mule</directory>
+            <includes>
+                <include>**/*.*</include>
+            </includes>
+        </fileSet>
+
+        <fileSet filtered="true" package="false" encoding="UTF-8">
+            <directory>src/main/resources/api</directory>
+            <includes>
+                <include>**/*.*</include>
+            </includes>
+        </fileSet>
+
+        <fileSet filtered="false" package="false" encoding="UTF-8">
+            <directory>src/main/resources-filtered</directory>
+            <includes>
+                <include>**/*.*</include>
+            </includes>
+        </fileSet>
+
+        <fileSet filtered="false" package="false" encoding="UTF-8">
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>**/*.jks</include>
+            </includes>
+        </fileSet>
+
+        <fileSet filtered="true" package="false" encoding="UTF-8">
+            <directory>src/main/resources</directory>
+            <includes>
+                <include>**/*.properties</include>
+                <include>**/*.raml</include>
+                <include>**/*.json</include>
+                <include>**/*.xml</include>
+                <include>**/*.txt</include>
+            </includes>
+        </fileSet>
+
+        <fileSet filtered="true" package="false" encoding="UTF-8">
+            <directory>src/test/java</directory>
+            <includes>
+                <include>**/*.*</include>
+            </includes>
+        </fileSet>
+
+        <fileSet filtered="true" package="false" encoding="UTF-8">
+            <directory>src/test/munit</directory>
+            <includes>
+                <include>**/*.*</include>
+            </includes>
+        </fileSet>
+
+        <fileSet filtered="true" package="false" encoding="UTF-8">
+            <directory>src/test/resources</directory>
+            <includes>
+                <include>**/*.*</include>
+            </includes>
+        </fileSet>
+
+        <fileSet filtered="false" package="false" encoding="UTF-8">
+            <directory></directory>
+            <includes>
+                <include>.gitignore</include>
+                <include>*.docx</include>
+                <include>*.xlsx</include>
+            </includes>
+        </fileSet>
+
+        <fileSet filtered="true" package="false" encoding="UTF-8">
+            <directory></directory>
+            <includes>
+                <include>mule-artifact.json</include>
+                <include>example-*.json</include>
+                <include>example-*.txt</include>
+                <include>example-*.xml</include>
+                <include>*.md</include>
+                <include>*.csv</include>
+                <include>*.bat</include>
+                <include>*.sh</include>
+                <include>*.adoc</include>
+            </includes>
+        </fileSet>
+    </fileSets>
+
+    <requiredProperties>
+       <requiredProperty key="groupId">
+           <defaultValue>org.mule.project</defaultValue>
+       </requiredProperty>
+       <requiredProperty key="artifactId"/>
+       <requiredProperty key="version">
+           <defaultValue>1.0.0</defaultValue>
+       </requiredProperty>
+       <requiredProperty key="package">
+          <defaultValue>mule-application</defaultValue>
+       </requiredProperty>
+   </requiredProperties>
+   
+</archetype-descriptor>

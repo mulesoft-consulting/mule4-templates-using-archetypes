@@ -15,9 +15,13 @@ mvn deploy -Partifact-repo
 
 Note that these are the other GitHub projects that will be required for these templates to work:
 
-* https://github.com/mulesoft-consulting/mule4-cps-rest-service
-* https://github.com/mulesoft-consulting/mule4-cps-connector
-* https://github.com/mulesoft-consulting/CpsTool
-* https://github.com/mulesoft-consulting/mule4-eframework-connector
-* https://github.com/mulesoft-consulting/minimal-logging
-* 
+* https://github.com/mulesoft-consulting/mule4-cps-encryption -release 1.1.2
+* https://github.com/mulesoft-consulting/mule4-totp -release 1.0.2
+* https://github.com/mulesoft-consulting/mule4-eframework-connector -release 1.1.0
+* https://github.com/mulesoft-consulting/minimal-logging -release 1.0.1
+* https://github.com/mulesoft-consulting/mule4-cps-rest-service -release 1.0.2
+* https://github.com/mulesoft-consulting/mule4-cps-connector -release 1.0.4
+* https://github.com/mulesoft-consulting/CpsTool -release 1.3.2
+
+
+

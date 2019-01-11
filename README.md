@@ -1,4 +1,4 @@
-# mule4-archetype-templates
+# mule4-templates-using-archetypes
 Using Maven archetype to create starting Mule4 projects from a template
 
 ## Install All Archetype templates on Workstation
@@ -7,7 +7,7 @@ To install this project in the local workstation Maven repository, clone this re
 ```
 mvn install
 ```
-## Deploy Archetype to Artifact Repository
+## Deploy All Archetype to Artifact Repository
 
 ```
 mvn deploy -Partifact-repo

@@ -2,6 +2,8 @@
 -Danypoint.platform.gatekeeper=disabled 
 -Dmule_cps_keystore_filename=cps-keystore.jks
 -Dmule_cps_keystore_password=changeit
+-Dmule_cps_keystore_client_id=xx
+-Dmule_cps_keystore_client_secret=xx
 -Dmule_cps_key_password=changeit
 -Dmule.env=DEV
 -Dsys.api.http.port=8081

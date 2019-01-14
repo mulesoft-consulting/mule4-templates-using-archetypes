@@ -267,6 +267,8 @@
 									<mule_cps_keystore_filename>${mule_cps_keystore_filename}</mule_cps_keystore_filename>
 									<mule_cps_keystore_password>${mule_cps_keystore_password}</mule_cps_keystore_password>
 									<mule_cps_key_password>${mule_cps_key_password}</mule_cps_key_password>
+									<mule_cps_keystore_client_id>${mule_cps_keystore_client_id}</mule_cps_keystore_client_id>
+									<mule_cps_keystore_client_secret>${mule_cps_keystore_client_secret}</mule_cps_keystore_client_secret>
 									<mule.cps.retry.count>${mule.cps.retry.count}</mule.cps.retry.count>
 									<exp.api.http.port>${exp.api.http.port}</exp.api.http.port>
 									<exp.api.https.port>${exp.api.https.port}</exp.api.https.port>
@@ -325,6 +327,8 @@
 									<mule_cps_keystore_filename>${mule_cps_keystore_filename}</mule_cps_keystore_filename>
 									<mule_cps_keystore_password>${mule_cps_keystore_password}</mule_cps_keystore_password>
 									<mule_cps_key_password>${mule_cps_key_password}</mule_cps_key_password>
+									<mule_cps_keystore_client_id>${mule_cps_keystore_client_id}</mule_cps_keystore_client_id>
+									<mule_cps_keystore_client_secret>${mule_cps_keystore_client_secret}</mule_cps_keystore_client_secret>
 									<mule.cps.retry.count>${mule.cps.retry.count}</mule.cps.retry.count>
 									<anypoint.platform.visualizer.layer>Experience</anypoint.platform.visualizer.layer>
 									<exp.api.http.port>8081</exp.api.http.port>

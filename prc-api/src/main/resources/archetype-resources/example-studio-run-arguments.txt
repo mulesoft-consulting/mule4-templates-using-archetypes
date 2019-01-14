@@ -3,6 +3,8 @@
 -Dmule_cps_keystore_filename=cps-keystore.jks
 -Dmule_cps_keystore_password=changeit
 -Dmule_cps_key_password=changeit
+-Dmule_cps_keystore_client_id=xx
+-Dmule_cps_keystore_client_secret=xx
 -Dmule.env=DEV
 -Dprc.api.http.port=8081
 -Dprc.api.https.port=8082

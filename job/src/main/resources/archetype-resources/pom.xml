@@ -13,8 +13,6 @@
 	<name>${artifactId}</name>
 
 	<properties>
-		<muleHttpConnector>1.2.0</muleHttpConnector>
-
 		<api.version>1.0.0</api.version>
 		<prc.api.http.port>8081</prc.api.http.port>
 		<prc.api.https.port>8082</prc.api.https.port>

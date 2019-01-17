@@ -13,8 +13,6 @@
 	<name>${artifactId}</name>
 
     <properties>
-		<muleHttpConnector>1.2.0</muleHttpConnector>
-
 		<api.version>1.0.0</api.version>
 		<sys.api.http.port>8081</sys.api.http.port>
 		<sys.api.https.port>8082</sys.api.https.port>

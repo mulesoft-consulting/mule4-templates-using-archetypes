@@ -14,8 +14,6 @@
 	<name>${artifactId}</name>
 
 	<properties>
-		<muleHttpConnector>1.2.0</muleHttpConnector>
-		
 		<api.version>1.0.0</api.version>
 		<exp.api.http.port>8081</exp.api.http.port>
 		<exp.api.https.port>8082</exp.api.https.port>

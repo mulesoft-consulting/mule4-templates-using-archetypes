@@ -1,0 +1,277 @@
+<?xml version="1.0"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+	<activeProfiles>
+		<activeProfile>global-settings</activeProfile>
+		<activeProfile>standard-repositories</activeProfile>
+	</activeProfiles>
+
+	<profiles>
+		<profile>
+			<id>global-settings</id>
+			<properties>
+				<my-organization-anypoint-orgid>my Anypoint orgid</my-organization-anypoint-orgid>
+				<api.anypoint.platform.client_id>my Anypoint client id</api.anypoint.platform.client_id>
+				<api.anypoint.platform.client_secret>my Anypoint client secret</api.anypoint.platform.client_secret>
+
+				<company.abbr>myco-</company.abbr>
+
+				<!-- api.businessGroup>Core-Experience-APIs</api.businessGroup -->
+				<api.businessGroup>my business group (or master org) name</api.businessGroup>
+
+				<deploy.businessGroup></deploy.businessGroup>
+
+				<dlb.routing.prefix></dlb.routing.prefix>
+				<cloudhub.name>${company.abbr}${dlb.routing.prefix}${project.artifactId}-${deploy.environment}</cloudhub.name>
+				<cloudhub.domain>.us-e2.cloudhub.io</cloudhub.domain>
+				<rtf.name>${project.artifactId}-${env}</rtf.name>
+				<rtf.domain>.mycompany.com</rtf.domain>
+				<hybrid.name>${project.artifactId}</hybrid.name>
+				<mule.artifact>target/${project.artifactId}-${version}-mule-application.jar</mule.artifact>
+
+				<ch.workers>1</ch.workers>
+				<ch.workerType>MICRO</ch.workerType>
+				<ch.deploymentTimeout>1000000</ch.deploymentTimeout>
+				<ch.region>us-east-2</ch.region>
+
+				<rtf.cpuReserved>152m</rtf.cpuReserved>
+				<rtf.memoryReserved>512Mi</rtf.memoryReserved>
+
+				<instance.id>base</instance.id>
+				<cps.configServerBaseUrl>https://host.domain/configuration-property-service/v1/config</cps.configServerBaseUrl>
+				<cps.insecure>false</cps.insecure>
+				<cps.clientId>x</cps.clientId>
+				<cps.clientSecret>x</cps.clientSecret>
+				<mule_cps_keystore_filename>https://host.domain/configuration-property-service/v1/config/document/project/base/base/base/cps-keystore.jks</mule_cps_keystore_filename>
+				<mule_cps_keystore_password>changeit</mule_cps_keystore_password>
+				<mule_cps_key_password>changeit</mule_cps_key_password>
+				<mule.cps.retry.count>5</mule.cps.retry.count>
+
+				<corporate-artifact-repository-url>https://repo-001.corporate.com:8443/repository</corporate-artifact-repository-url>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>no-environment</id>
+			<activation>
+				<property>
+					<name>env</name>
+					<value></value>
+				</property>
+			</activation>
+			<properties>
+				<deploy.app.suffix>local</deploy.app.suffix>
+				<deploy.environment>LOCAL</deploy.environment>
+				<deploy.target></deploy.target>
+				<deploy.targetType></deploy.targetType>
+			</properties>
+		</profile>
+
+		<!--
+			These are the deployment configurations, one for each environment, server, server-group or cluster supported for this organization
+		-->		
+
+		<profile>
+			<id>dev</id>
+			<activation>
+				<property>
+					<name>env</name>
+					<value>dev</value>
+				</property>
+			</activation>
+			<properties>
+				<deploy.app.suffix></deploy.app.suffix>
+				<deploy.environment>DEV</deploy.environment>
+				<deploy.target>rtf-qa</deploy.target>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>test</id>
+			<activation>
+				<property>
+					<name>env</name>
+					<value>test</value>
+				</property>
+			</activation>
+			<properties>
+				<deploy.app.suffix></deploy.app.suffix>
+				<deploy.environment>TEST</deploy.environment>
+				<deploy.target>rtf-qa</deploy.target>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>qa</id>
+			<activation>
+				<property>
+					<name>env</name>
+					<value>qa</value>
+				</property>
+			</activation>
+			<properties>
+				<deploy.app.suffix></deploy.app.suffix>
+				<deploy.environment>QA</deploy.environment>
+				<deploy.target>rtf-qa</deploy.target>
+			</properties>
+		</profile>
+		
+		<profile>
+			<id>prd</id>
+			<activation>
+				<property>
+					<name>env</name>
+					<value>prd</value>
+				</property>
+			</activation>
+			<properties>
+				<deploy.app.suffix></deploy.app.suffix>
+				<deploy.environment>PRD</deploy.environment>
+				<deploy.target>rtf-prd</deploy.target>
+				<cps.configServerBaseUrl>https://host.domain/configuration-property-service/v1/config</cps.configServerBaseUrl>
+				<cps.insecure>false</cps.insecure>
+				<cps.clientId>x</cps.clientId>
+				<cps.clientSecret>x</cps.clientSecret>
+				<mule_cps_keystore_filename>https://host.domain/configuration-property-service/v1/config/document/project/base/base/base/cps-keystore.jks</mule_cps_keystore_filename>
+				<mule_cps_keystore_password>changeit</mule_cps_keystore_password>
+				<mule_cps_key_password>changeit</mule_cps_key_password>
+				<mule.cps.retry.count>5</mule.cps.retry.count>
+			</properties>
+		</profile>
+
+		<!--
+			These are the repositories that will be used to resolve dependencies
+		-->
+
+		<profile>
+			<id>standard-repositories</id>
+			<repositories>
+				<repository>
+					<id>Central</id>
+					<name>Central</name>
+					<url>http://repo1.maven.org/maven2/</url>
+					<layout>default</layout>
+				</repository>
+				<repository>
+					<id>mulesoft-releases</id>
+					<name>MuleSoft Releases Repository</name>
+					<url>http://repository.mulesoft.org/releases/</url>
+					<layout>default</layout>
+				</repository>
+				<repository>
+					<id>mulesoft-ee-release</id>
+					<url>https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/</url>
+					<layout>default</layout>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</repository>
+				<repository>
+					<id>mulesoft-exchange-repository</id>
+					<name>Mulesoft Exchange Repository</name>
+					<url>https://maven.anypoint.mulesoft.com/api/v1/maven</url>
+					<layout>default</layout>
+				</repository>
+
+			<!-- uncomment to use the organization's exchange as a repository
+				<repository>
+					<id>my-organization-exchange-repository</id>
+					<name>Mulesoft Exchange Repository</name>
+					<url>https://maven.anypoint.mulesoft.com/api/v1/organizations/${my-organization-anypoint-orgid}/maven</url>
+					<layout>default</layout>
+				</repository>
+			-->
+
+			<!-- uncomment to use the corporate artifact repository (don't forget to configure the url
+				<repository>
+					<id>corporate-artifact-repository</id>
+					<name>Corporate Artifact Repository</name>
+					<url>https://repo-001.corporate.com:8443/repository/</url>
+					<layout>default</layout>
+				</repository>
+			-->
+
+			</repositories>
+
+			<pluginRepositories>
+				<pluginRepository>
+					<id>mule-public</id>
+					<layout>default</layout>
+					<url>https://repository.mulesoft.org/nexus/content/repositories/releases</url>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</pluginRepository>
+				<pluginRepository>
+					<id>mulesoft-release</id>
+					<name>mulesoft release repository</name>
+					<layout>default</layout>
+					<url>https://repository.mulesoft.org/nexus/content/groups/public</url>
+					<snapshots>
+						<enabled>false</enabled>
+					</snapshots>
+				</pluginRepository>
+				<pluginRepository>
+					<id>mulesoft-ee-release</id>
+					<url>https://repository.mulesoft.org/nexus-ee/content/repositories/releases-ee/</url>
+					<layout>default</layout>
+					<releases>
+						<enabled>true</enabled>
+					</releases>
+					<snapshots>
+						<enabled>true</enabled>
+					</snapshots>
+				</pluginRepository>
+			</pluginRepositories>
+		</profile>		
+	</profiles>
+
+	<pluginGroups>
+		<pluginGroup>org.mule.tools</pluginGroup>
+	</pluginGroups>
+
+	<servers>
+		<!--configure the user credentials to access the repositories-->
+		<server>
+			<id>corporate-artifact-repository</id>
+			<username>me</username>
+			<password>password</password>
+		</server>
+		<server>
+			<id>my-organization-exchange-repository</id>
+			<username>${u}</username>
+			<password>${p}</password>
+		</server>
+		<server>
+			<id>mulesoft-exchange-repository</id>
+			<username>${u}</username>
+			<password>${p}</password>
+		</server>
+		<server>
+			<id>anypoint-platform</id>
+			<username>mule.nexus.user</username>
+			<password>mule.nexus.user.password</password>
+		</server>
+		<server>
+			<id>mulesoft-ee-release</id>
+			<username>mule.nexus.user</username>
+			<password>mule.nexus.user.password</password>
+		</server>
+		<server>
+			<id>mulesoft-snapshots</id>
+			<username>mule.nexus.user</username>
+			<password>mule.nexus.user.password</password>
+		</server>
+		<server>
+			<id>mulesoft-private</id>
+			<username>mule.nexus.user</username>
+			<password>mule.nexus.user.password</password>
+		</server>
+	</servers>
+
+</settings>

@@ -1,0 +1,15 @@
+{
+  "projectName": "${artifactId}",
+  "branchName": "base",
+  "instanceId": "base",
+  "keyId": "base",
+  "envName": "DEV",
+  "imports": [
+    
+  ],
+  "properties": {
+  	"secure.properties": "my.client_secret",
+  	"my.client_id": "x",
+  	"my.client_secret": "x"
+  }
+}

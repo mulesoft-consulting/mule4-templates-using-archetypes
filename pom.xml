@@ -11,5 +11,6 @@
         <module>exp-api</module>     
         <module>prc-api</module>     
         <module>sys-api</module>     
+        <module>job</module>     
     </modules>
 </project>

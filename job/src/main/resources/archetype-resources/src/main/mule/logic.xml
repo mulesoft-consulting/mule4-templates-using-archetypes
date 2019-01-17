@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:min-log="http://www.mulesoft.org/schema/mule/min-log" xmlns:jms="http://www.mulesoft.org/schema/mule/jms"
+	xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/jms http://www.mulesoft.org/schema/mule/jms/current/mule-jms.xsd
+http://www.mulesoft.org/schema/mule/min-log http://www.mulesoft.org/schema/mule/min-log/current/mule-min-log.xsd">
+	<flow name="logic-publishFlow" doc:id="ff7fd59b-440e-4de5-9147-614647f815ba" >
+		<scheduler doc:name="Scheduler" doc:id="4c623875-9daa-491d-ba58-1c7dd881fdf6" >
+			<scheduling-strategy >
+				<fixed-frequency frequency="10" timeUnit="MINUTES"/>
+			</scheduling-strategy>
+		</scheduler>
+		<min-log:new doc:name="minLog" doc:id="301d5862-61ff-4cfc-9491-e7860a54fedf" headers='#[{"client_id": "${my.client_id}"}]' target="transactionProperties"/>
+		<min-log:timed transactionProperties="#[vars.transactionProperties]"
+			doc:name="Timed">
+			<set-payload value="Now is the time for all good men to come to the aid of their country" doc:name="Set Payload" doc:id="7a535f85-1f2e-4fe1-a8e9-676c73074a54" encoding="UTF-8" mimeType="text/plain"/>
+		</min-log:timed>
+	</flow>
+</mule>

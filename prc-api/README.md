@@ -19,5 +19,5 @@ mvn deploy -Partifact-repo
 To generate an Process API skeleton using this archetype, use the command:
 
 ```
-mvn archetype:generate -DarchetypeGroupId=org.mule.templates -DarchetypeArtifactId=prc-api -DarchetypeVersion=1.0.0 -DartifactId=mytest-exp-api -B
+mvn archetype:generate -DarchetypeGroupId=org.mule.templates -DarchetypeArtifactId=prc-api -DarchetypeVersion=1.0.0 -DartifactId=mytest-prc-api -B
 ```

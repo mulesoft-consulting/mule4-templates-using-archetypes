@@ -14,7 +14,7 @@ http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/
 		<min-log:timed transactionProperties="#[vars.transactionProperties]"
 			doc:name="Timed">
 
-			<set-variable value="${api.base}" doc:name="moduleName" variableName="moduleName"/>
+			<set-variable value="${artifactId}" doc:name="moduleName" variableName="moduleName"/>
 			<ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
 				xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd" doc:id="96808fe9-035f-4255-806e-f735ec55406b">
 				<ee:message>
@@ -34,7 +34,7 @@ output application/json
 	<flow name="get:\ping:api-config">
 		<min-log:timed transactionProperties="#[vars.transactionProperties]"
 			doc:name="Timed">
-			<set-variable value="${api.base}" doc:name="moduleName" variableName="moduleName"/>
+			<set-variable value="${artifactId}" doc:name="moduleName" variableName="moduleName"/>
 
 			<choice doc:name="Choice" doc:id="4f893bc6-c571-4765-b936-8e03d6379dda" >
 				<when expression="#[attributes.headers.'x-dependent-ping' != null and attributes.headers.'x-dependent-ping' == &quot;true&quot;]">

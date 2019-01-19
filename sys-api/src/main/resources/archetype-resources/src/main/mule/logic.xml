@@ -13,7 +13,7 @@ http://www.mulesoft.org/schema/mule/scripting http://www.mulesoft.org/schema/mul
 		<min-log:timed transactionProperties="#[vars.transactionProperties]"
 			doc:name="Timed">
 
-			<set-variable value="${api.base}" doc:name="moduleName" variableName="moduleName"/>
+			<set-variable value="${artifactId}" doc:name="moduleName" variableName="moduleName"/>
 			<ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
 				xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd" doc:id="741d2bee-4242-4b61-8083-a76795db07e0">
 				<ee:message>
@@ -33,7 +33,7 @@ output application/json
 	<flow name="get:\ping:api-config">
 		<min-log:timed transactionProperties="#[vars.transactionProperties]"
 			doc:name="Timed">
-			<set-variable value="${api.base}" doc:name="moduleName" variableName="moduleName"/>
+			<set-variable value="${artifactId}" doc:name="moduleName" variableName="moduleName"/>
 
 			<ee:transform xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
 				xsi:schemaLocation="http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd" doc:id="eabec06a-cb68-4a89-b6dc-3bdb41c05212">

@@ -21,14 +21,6 @@ http://www.mulesoft.org/schema/mule/eframework http://www.mulesoft.org/schema/mu
 		insecure="${cps.insecure}" projectName="${cps.projectName}" branchName="${cps.branchName}"
 		instanceId="${cps.instanceId}" envName="${mule.env}" keyId="${cps.keyId}" clientId="${cps.clientId}"
 		clientSecret="${cps.clientSecret}" configId="cps-config" />
-
-	<http:request-config name="request_api_configuration" doc:name="request api configuration" basePath="${request.api.path}">
-		<http:request-connection host="${request.api.host}" port="${request.api.port}" protocol="HTTPS" tlsContext="TLS_allow_unsigned_certs"/>
-	</http:request-config>
-	
-	<tls:context name="TLS_allow_unsigned_certs" doc:name="TLS Context" doc:id="8275fb27-8de8-4aae-ba0a-ca65ad30c143" >
-		<tls:trust-store insecure="true" />
-	</tls:context>
 	
 	<eframework:config name="Eframework_Config" doc:name="Eframework Config" doc:id="c8a18472-d309-4070-81dd-576c3c29b65d" applicationId="${cps.projectName}" />
 

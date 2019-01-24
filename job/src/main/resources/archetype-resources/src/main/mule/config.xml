@@ -1,15 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<mule xmlns:tls="http://www.mulesoft.org/schema/mule/tls"
-	xmlns:cps="http://www.mulesoft.org/schema/mule/cps"
-	xmlns:http="http://www.mulesoft.org/schema/mule/http"
-	xmlns:secure-properties="http://www.mulesoft.org/schema/mule/secure-properties" xmlns="http://www.mulesoft.org/schema/mule/core"
-	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
+<mule xmlns:eframework="http://www.mulesoft.org/schema/mule/eframework"
+	xmlns:min-log="http://www.mulesoft.org/schema/mule/min-log"
+	xmlns:tls="http://www.mulesoft.org/schema/mule/tls"
+	xmlns:cps="http://www.mulesoft.org/schema/mule/cps" xmlns:http="http://www.mulesoft.org/schema/mule/http"
+	xmlns:secure-properties="http://www.mulesoft.org/schema/mule/secure-properties"
+	xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="
 http://www.mulesoft.org/schema/mule/tls http://www.mulesoft.org/schema/mule/tls/current/mule-tls.xsd 
 http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
 http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/schema/mule/secure-properties/current/mule-secure-properties.xsd
-http://www.mulesoft.org/schema/mule/cps http://www.mulesoft.org/schema/mule/cps/current/mule-cps.xsd">
+http://www.mulesoft.org/schema/mule/cps http://www.mulesoft.org/schema/mule/cps/current/mule-cps.xsd
+http://www.mulesoft.org/schema/mule/min-log http://www.mulesoft.org/schema/mule/min-log/current/mule-min-log.xsd
+http://www.mulesoft.org/schema/mule/eframework http://www.mulesoft.org/schema/mule/eframework/current/mule-eframework.xsd">
 
 	<configuration-properties doc:name="Configuration properties" doc:id="8e928e25-1be7-44d8-a9f3-317850fa67d3" file="common.properties" />
 
@@ -19,5 +21,15 @@ http://www.mulesoft.org/schema/mule/cps http://www.mulesoft.org/schema/mule/cps/
 		insecure="${cps.insecure}" projectName="${cps.projectName}" branchName="${cps.branchName}"
 		instanceId="${cps.instanceId}" envName="${mule.env}" keyId="${cps.keyId}" clientId="${cps.clientId}"
 		clientSecret="${cps.clientSecret}" configId="cps-config" />
+
+	<http:request-config name="request_api_configuration" doc:name="request api configuration" basePath="${request.api.path}">
+		<http:request-connection host="${request.api.host}" port="${request.api.port}" protocol="HTTPS" tlsContext="TLS_allow_unsigned_certs"/>
+	</http:request-config>
+	
+	<tls:context name="TLS_allow_unsigned_certs" doc:name="TLS Context" doc:id="8275fb27-8de8-4aae-ba0a-ca65ad30c143" >
+		<tls:trust-store insecure="true" />
+	</tls:context>
+	
+	<eframework:config name="Eframework_Config" doc:name="Eframework Config" doc:id="c8a18472-d309-4070-81dd-576c3c29b65d" applicationId="${cps.projectName}" />
 
 </mule>

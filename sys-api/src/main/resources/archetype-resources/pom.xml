@@ -23,7 +23,7 @@
 		<app.runtime>4.1.5</app.runtime>
 		<anypoint.monitoring.suffix></anypoint.monitoring.suffix>
 		<maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
-		<mule.maven.plugin.version>3.2.3</mule.maven.plugin.version>
+		<mule.maven.plugin.version>3.2.5</mule.maven.plugin.version>
 
 		<cps.projectName>${project.artifactId}</cps.projectName>
 		<cps.branchName>base</cps.branchName>

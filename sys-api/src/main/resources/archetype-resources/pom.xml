@@ -259,6 +259,7 @@
 									<mule.cps.retry.count>${mule.cps.retry.count}</mule.cps.retry.count>
 									<sys.api.http.port>${sys.api.http.port}</sys.api.http.port>
 									<sys.api.https.port>${sys.api.https.port}</sys.api.https.port>
+									<api.base>${api.base}</api.base>
 									<sun.net.http.allowRestrictedHeaders>false</sun.net.http.allowRestrictedHeaders>
 								</properties>
 							</cloudHubDeployment>
@@ -319,6 +320,7 @@
 									<anypoint.platform.visualizer.layer>System</anypoint.platform.visualizer.layer>
 									<sys.api.http.port>8081</sys.api.http.port>
 									<sys.api.https.port>8081</sys.api.https.port>
+									<api.base>${api.base}</api.base>
 									<sun.net.http.allowRestrictedHeaders>false</sun.net.http.allowRestrictedHeaders>
 								</properties>
 							</runtimeFabricDeployment>

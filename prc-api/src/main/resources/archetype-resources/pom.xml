@@ -259,6 +259,7 @@
 									<mule.cps.retry.count>${mule.cps.retry.count}</mule.cps.retry.count>
 									<prc.api.http.port>${prc.api.http.port}</prc.api.http.port>
 									<prc.api.https.port>${prc.api.https.port}</prc.api.https.port>
+									<api.base>${api.base}</api.base>
 									<sun.net.http.allowRestrictedHeaders>false</sun.net.http.allowRestrictedHeaders>
 								</properties>
 							</cloudHubDeployment>
@@ -319,6 +320,7 @@
 									<anypoint.platform.visualizer.layer>Process</anypoint.platform.visualizer.layer>
 									<prc.api.http.port>8081</prc.api.http.port>
 									<prc.api.https.port>8081</prc.api.https.port>
+									<api.base>${api.base}</api.base>
 									<sun.net.http.allowRestrictedHeaders>false</sun.net.http.allowRestrictedHeaders>
 								</properties>
 							</runtimeFabricDeployment>

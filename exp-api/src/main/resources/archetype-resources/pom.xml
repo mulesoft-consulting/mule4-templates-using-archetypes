@@ -331,6 +331,7 @@
 									<anypoint.platform.visualizer.layer>Experience</anypoint.platform.visualizer.layer>
 									<exp.api.http.port>8081</exp.api.http.port>
 									<exp.api.https.port>8081</exp.api.https.port>
+									<api.base>${api.base}</api.base>
 									<sun.net.http.allowRestrictedHeaders>false</sun.net.http.allowRestrictedHeaders>
 								</properties>
 							</runtimeFabricDeployment>

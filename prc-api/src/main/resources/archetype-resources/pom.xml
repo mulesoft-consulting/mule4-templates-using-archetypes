@@ -190,7 +190,7 @@
 							<dependency>
 								<groupId>com.mulesoft.java</groupId>
 								<artifactId>mule-api-config</artifactId>
-								<version>1.0.4</version>
+								<version>1.0.5</version>
 								<type>jar</type>
 							</dependency>
 						</dependencies>

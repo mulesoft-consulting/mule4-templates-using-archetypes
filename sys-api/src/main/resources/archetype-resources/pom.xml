@@ -14,8 +14,8 @@
 
     <properties>
 		<api.version>1.0.0</api.version>
-		<sys.api.http.port>8081</sys.api.http.port>
-		<sys.api.https.port>8082</sys.api.https.port>
+		<sys.api.http.port>8091</sys.api.http.port>
+		<sys.api.https.port>8092</sys.api.https.port>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

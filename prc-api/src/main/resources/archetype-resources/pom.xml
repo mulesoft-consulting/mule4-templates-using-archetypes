@@ -14,8 +14,8 @@
 
 	<properties>
 		<api.version>1.0.0</api.version>
-		<prc.api.http.port>8081</prc.api.http.port>
-		<prc.api.https.port>8082</prc.api.https.port>
+		<prc.api.http.port>8091</prc.api.http.port>
+		<prc.api.https.port>8092</prc.api.https.port>
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>

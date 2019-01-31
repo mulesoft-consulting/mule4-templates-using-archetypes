@@ -8,7 +8,9 @@
     
   ],
   "properties": {
-    "request.api.host": "skeleton-ms.domain",
-    "request.api.port": "443"
+    "request.api.host": "skeleton-sys-api-dev.us-e2.cloudhub.io",
+    "request.api.port": "8092",
+    "request.api.path": "/v1",
+    "request.host.header": "skeleton-sys-api-dev.us-e2.cloudhub.io"
   }
 }

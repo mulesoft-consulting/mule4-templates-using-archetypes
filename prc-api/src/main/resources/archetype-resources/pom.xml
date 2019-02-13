@@ -260,6 +260,7 @@
 									<prc.api.http.port>${prc.api.http.port}</prc.api.http.port>
 									<prc.api.https.port>${prc.api.https.port}</prc.api.https.port>
 									<api.base>${api.base}</api.base>
+									<my.client_secret>${my.client_secret}</my.client_secret>
 									<sun.net.http.allowRestrictedHeaders>false</sun.net.http.allowRestrictedHeaders>
 								</properties>
 							</cloudHubDeployment>
@@ -321,6 +322,7 @@
 									<prc.api.http.port>8081</prc.api.http.port>
 									<prc.api.https.port>8081</prc.api.https.port>
 									<api.base>${api.base}</api.base>
+									<my.client_secret>${my.client_secret}</my.client_secret>
 									<sun.net.http.allowRestrictedHeaders>false</sun.net.http.allowRestrictedHeaders>
 								</properties>
 							</runtimeFabricDeployment>

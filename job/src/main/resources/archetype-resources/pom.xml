@@ -147,6 +147,7 @@
 									<mule_cps_keystore_client_id>${mule_cps_keystore_client_id}</mule_cps_keystore_client_id>
 									<mule_cps_keystore_client_secret>${mule_cps_keystore_client_secret}</mule_cps_keystore_client_secret>
 									<mule.cps.retry.count>${mule.cps.retry.count}</mule.cps.retry.count>
+									<my.client_secret>${my.client_secret}</my.client_secret>
 									<sun.net.http.allowRestrictedHeaders>false</sun.net.http.allowRestrictedHeaders>
 								</properties>
 							</cloudHubDeployment>
@@ -205,6 +206,7 @@
 									<mule_cps_keystore_client_secret>${mule_cps_keystore_client_secret}</mule_cps_keystore_client_secret>
 									<mule.cps.retry.count>${mule.cps.retry.count}</mule.cps.retry.count>
 									<anypoint.platform.visualizer.layer>Job</anypoint.platform.visualizer.layer>
+									<my.client_secret>${my.client_secret}</my.client_secret>
 									<sun.net.http.allowRestrictedHeaders>false</sun.net.http.allowRestrictedHeaders>
 								</properties>
 							</runtimeFabricDeployment>

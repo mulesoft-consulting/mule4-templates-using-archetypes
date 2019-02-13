@@ -271,6 +271,7 @@
 									<exp.api.http.port>${exp.api.http.port}</exp.api.http.port>
 									<exp.api.https.port>${exp.api.https.port}</exp.api.https.port>
 									<api.base>${api.base}</api.base>
+									<my.client_secret>${my.client_secret}</my.client_secret>
 									<sun.net.http.allowRestrictedHeaders>false</sun.net.http.allowRestrictedHeaders>
 								</properties>
 							</cloudHubDeployment>
@@ -332,6 +333,7 @@
 									<exp.api.http.port>8081</exp.api.http.port>
 									<exp.api.https.port>8081</exp.api.https.port>
 									<api.base>${api.base}</api.base>
+									<my.client_secret>${my.client_secret}</my.client_secret>
 									<sun.net.http.allowRestrictedHeaders>false</sun.net.http.allowRestrictedHeaders>
 								</properties>
 							</runtimeFabricDeployment>
